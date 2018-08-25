@@ -14,6 +14,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+
 \title{CS 6000 Journal Week 1}
 \author{David Stout}
 
@@ -29,7 +30,8 @@ learn, my prospective degree track, and a little bit about me personally.
 \section{Goals for the course}
 
 Coming into this course I was a little intimidated by the perceived complexity, but after Monday’s initial
-lecture I feel very excited at the prospect of gaining confidence and experience in the art of research and writing research papers. I would like to learn about all the different techniques and methods used in the
+lecture I feel very excited at the prospect of gaining confidence and experience in the art of research and 
+writing research papers. I would like to learn about all the different techniques and methods used in the
 varying fields of research, specifically computer science research, so that I am able to utilize the best
 methods for my current and future research projects. Also, I am looking forward to being able to
 effectively read and evaluate research papers, to determine their potential merit. I think that it will be 
@@ -56,54 +58,79 @@ systems, and scuba diving in the Caribbean.
 
 \subsection{GitHub repository location with source code}
 
-The GitHub repository that I have used is the one that I have created under the boultclass group, I plan to use 
+The GitHub repository that I have used is the one that I have created under the boultclass group. I plan to use 
 this repo for all the assignments for this course.
 
 The repo for this assignment may be found at:
-
+\href{https://github.com/BoultClasses/dstout}{https://github.com/BoultClasses/dstout}
 
 \subsection{What I have learned this week}
 
-This week, I have been focusing on learning the necessary tools to do the homework for this class. I had very limited exposure to LaTex previously and have never used Overleaf before, also I had never heard of Zotero and had to learn how to use it to my benefit.
+This week, I have been focusing on learning the necessary tools to do the homework for this class. I had very 
+limited exposure to \LaTeX{} previously and have never used Overleaf before so I had to navigate the Overleaf 
+interface and relearn a lot of the LaTex commands that I had previously used.I also had never heard of Zotero 
+and had to learn how to use it to my benefit.
 
 \subsubsection{Problems and struggles that were overcome}
+The majority of problems that I had with this assignment came from my lack of knowledge with Zotero. In 
+particular I found it difficult to create sufficient entries in the program itself. I overcame this problem by 
+installing the chrome addon for Zotero that allowed entries to be made from a pdf with just the click of a 
+button. The next big problem was figuring out how to create a .bib file from Zotero that could be used in the 
+Overleaf project. After exporting the library, I was able to create the file in BibTex and watched a video on how to properly incorporate it.
 
+Another issue that I had was pushing the Overleaf paper project directly to GitHub. I did not find a sufficient 
+method to do so before the due date for this assignment and just did a work-around by downloading the project 
+as a zipfile, which I could then manually push to my repo. I will continue my learning to be able to do this 
+directly through Overleaf in the future.
 
-\subsection{How to write Mathematics}
+\subsection{Papers - overview and formula}
 
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+\textbf{Are all code smells harmful? A study of God Classes and Brain Classes in the evolution of three open 
+source systems.} 
 
+\cite{olbrich_are_2010} The claim that classes that involved in certain code smells are liable to be changed 
+frequently, having more defects than other classes is explored in this paper. They investigate the whether thi 
+claim is true for God  and Brain Classes. The results show that God and Brain Classes were changed more 
+frequently and contained more defects than other kinds of class, but when normalized for size the changes were 
+less frequent.
 
-\subsection{How to create Sections and Subsections}
-
-Use section and subsections to organize your document. Simply use the section and subsection buttons in the toolbar to create them, and we'll handle all the formatting and numbering automatically.
-
-\subsection{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
+The formula for detecting a God Class(GC) is as follows:
+\[GC(C) = \begin{cases}
+			1, & ((WMC(C) \geq 47) \wedge (TCC(C) < 0.\bar{3}) \wedge (ATFD(C) > 5)) \\
+            0, & else
+\end{cases}\]
+Where: 
 \begin{itemize}
-\item Like this,
-\item and like this.
+\item C is the class being inspected.
+\item Weighted Method Count (WMC(C)) is the sum of the cyclomatic complexity of all methods in C.
+\item Tight Class Cohesion (TCC(C)) is the relative number of directly connected methods in C.
+\item Access To Foreign Data (ATFD(C)) is the number of attributes of foreign classes accessed directly by class C or via accessor methods.
 \end{itemize}
 
-\subsection{How to add Citations and a References List}
+This formula was used by the authors in the detection strategy of God Classes for this paper. It established a base line by which a class could be considered a God Class and not a Brain class.
 
-You can upload a \verb|.bib| file containing your BibTeX entries, created with JabRef; or import your \href{https://www.overleaf.com/blog/184}{Mendeley}, CiteULike or Zotero library as a \verb|.bib| file. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|.
 
-You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
+\textbf{Detecting and comparing brain activity in short program comprehension using EEG}
 
-We hope you find Overleaf useful, and please let us know if you have any feedback using the help menu above --- or use the contact form at \url{https://www.overleaf.com/contact}!
+\cite{yeh_detecting_2017}The authors believe that programming comprehension comes at different stages of the SDLC. This is measured using EEG analysis and then is plotted with ANOVA testing.
 
-\bibliographystyle{alpha}
-\bibliography{sample}
+\textbf{Java quality assurance by detecting code smells}
+
+\cite{emden_java_2002}
+The authors explore how the quality of code can be assessed automatically by checking for the presence of code smells. The feasibility of the approach is used in the design of a prototype tool that is applied to their case study successfully.
+
+\textbf{Prevalence of confusing code in software projects: atoms of confusion in the wild}
+
+\cite{gopstein_prevalence_2018}
+The authors build on their previous atoms of confusion work to identify how these confusing micro patterns affect project level code and the rate of removal of these patterns in bug-repair commits. 
+
+\textbf{Understanding misunderstandings in source code}
+
+\cite{gopstein_understanding_2017}
+The authors set out to identify inherently confusing micro patterns in code that can lead to runtime errors. The patterns are generally used in 
+software projects and style guides, but they tend to confuse programmers. Using the authors identified confusing code, they show that in experiment they can lead to a significant increased rate of misunderstanding versus an equivalent code without the pattern.
+
+\bibliographystyle{IEEEtran}
+\bibliography{Exported_Items}
 
 \end{document}
